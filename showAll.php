@@ -1,4 +1,6 @@
 <?php
+
+  //Создаем  экземпляр класса и вызываем метод showAll()
   $res = new Vladis($pdo);
   $results = $res->showAll();
 ?>
@@ -12,6 +14,7 @@
     <div class="container">
 	
 		<div class="list-group">
+			<a class="btn btn-primary" href="/">Обновить</a>
 			<a class="btn btn-primary" href="/createGroup.php">Добавить Группу</a>
 			<a class="btn btn-success" href="/createIp.php">Добавить Ip</a>
 		</div>
@@ -32,6 +35,7 @@
 				      <th><?=++$i?></th>
 				      <td><?=$result['title'];?></td>
 				      <td><?=$result['ip'];?></td>
+				      <!-- Для каждой стоки создаем ссылку с id и ip, для далнейшего использования  -->
 				      <td><a href="pingPage.php?ping=<?=$result['id'];?>&ip=<?=$result['ip'];?>">пинговать</a></td>
 				      <td><a href="historyPage.php?id=<?=$result['id'];?>">history</a></td>
 				    </tr>

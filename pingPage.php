@@ -6,7 +6,10 @@
 </head>
 <body>
 	<?php
- $ip = "127.0.0.1";
+
+	//Получаем из адресной строки ip и передаем в функцию 
+ // $ip = "127.0.0.1";
+	
 function ping($ip){
     $output = shell_exec("ping $ip");
     echo("<pre>");

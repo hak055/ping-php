@@ -13,6 +13,7 @@
 	</style>
 </head>
 <body>
+           <!-- Добавление IP адреса и выбор группы -->
 	<form method="get" action="index.php" class="form-horizontal col-md-6 col-md-offset-3">
 			<h2>Добавление IP адреса</h2>
 			<div class="form-group">

@@ -7,7 +7,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 </head>
 <body>
-
+ 			<!-- Добавление группы -->
 <form action="index.php" method="get" class="form-horizontal col-md-6 col-md-offset-3">
 	<h2>Добавление Группы</h2>
 			<div class="form-group">

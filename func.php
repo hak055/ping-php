@@ -17,7 +17,8 @@ class Vladis
 		
 		$sql = "SELECT * FROM groupIp 
 				JOIN server 
-				WHERE server.group_id = groupIp.id";
+				WHERE server.group_id = groupIp.id ORDER BY server.id DESC";
+
 		$results = $this->pdo->query($sql)->fetchAll();
 
 		return $results;
@@ -54,7 +55,9 @@ class Vladis
 					if($stmt->fetchColumn() > 0)
 						{
 							echo '<div class="btn btn-warning">'.'Есть такой  ip'.'</div>';
-						}else{			      
+						}else{	
+
+						//Вставка IP при удачной проверке		      
 							    $sql_ip = "INSERT INTO server (group_id, ip) VALUES (:group_id, :ip)";
 								$insertIP = $this->pdo->prepare($sql_ip);
 								$insertIP->bindParam(':group_id', $group_id);
